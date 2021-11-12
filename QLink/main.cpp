@@ -1,11 +1,9 @@
-#include "mainwindow.h"
-
+#include "QWindowController.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+    QWindowController& controller=QWindowController::getInstance();
     return a.exec();
 }

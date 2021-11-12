@@ -6,19 +6,38 @@ CONFIG += c++11
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
-#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    main.cpp \
-    mainwindow.cpp
+    QLinkBox.cpp \
+    QLinkMap.cpp \
+    QLinkMenu.cpp \
+    QLinkWindow.cpp \
+    QPlayer.cpp \
+    QWindowController.cpp \
+    JsonUtils.cpp \
+    UnitTest.cpp \
+    main.cpp
 
 HEADERS += \
-    mainwindow.h
+    QLinkBox.h \
+    QLinkMap.h \
+    QLinkMenu.h \
+    QLinkWindow.h \
+    QPlayer.h \
+    QWindowController.h \
+    Constant.h \
+    JsonUtils.h \
+    UnitTest.h
 
 FORMS += \
-    mainwindow.ui
+    QLinkMenu.ui \
+    QLinkWindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    res.qrc
