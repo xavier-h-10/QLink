@@ -28,10 +28,14 @@ private slots:
 
 private:
     Ui::QLinkMenu *ui;
+
     void loadFile(const QString &dir,const QString &str);
 
 signals:
     void startGame(Constant::MODE mode);
+
     void quitGame();
+
+    void loadGame();
 };
 #endif // QLINKMENU_H

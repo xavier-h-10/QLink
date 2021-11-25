@@ -7,18 +7,33 @@
 
 #include <QImage>
 #include <QLabel>
-
+#include <QObject>
+#include <QWidget>
+#include <QPixmap>
 
 class QLinkBox {
 public:
-    QLinkBox(int w,int h,int type);
+    QLinkBox(int h, int w, int type, QImage *icon);
+
     ~QLinkBox();
 
+    QLabel *getLabel();
+
+    void select(int num); //根据玩家编号,选中时需要标注不同颜色
+
+    void deSelect();
+
+    void clear();
+
+    void hint();
+
+    void changeType(QImage *icon); //shuffle后改变类型
+
 private:
-    QImage icon;
     QLabel *label;
-    int w;
-    int h;
+    QPixmap pixmap;
+    int h, w;
+    bool isEmpty;
     int type;
 
 };

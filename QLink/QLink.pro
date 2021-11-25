@@ -12,10 +12,10 @@ SOURCES += \
     QLinkBox.cpp \
     QLinkMap.cpp \
     QLinkMenu.cpp \
+    QLinkProp.cpp \
     QLinkWindow.cpp \
     QPlayer.cpp \
     QWindowController.cpp \
-    JsonUtils.cpp \
     UnitTest.cpp \
     main.cpp
 
@@ -23,11 +23,11 @@ HEADERS += \
     QLinkBox.h \
     QLinkMap.h \
     QLinkMenu.h \
+    QLinkProp.h \
     QLinkWindow.h \
     QPlayer.h \
     QWindowController.h \
     Constant.h \
-    JsonUtils.h \
     UnitTest.h
 
 FORMS += \

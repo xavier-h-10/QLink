@@ -1,11 +1,18 @@
-#ifndef UNITTEST_H
-#define UNITTEST_H
+//#ifndef UNITTEST_H
+//#define UNITTEST_H
+
+//#include <QtTest/QtTest>
 
 
-class UnitTest
-{
-public:
-    UnitTest();
-};
+//class UnitTest
+//{
+//    Q_OBJECT
+//public:
+//    UnitTest();
 
-#endif // UNITTEST_H
+//private slots:
+//    void case1_testcase();
+//    void case2_testcase();
+//};
+
+//#endif // UNITTEST_H

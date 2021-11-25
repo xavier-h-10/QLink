@@ -16,8 +16,16 @@ private:
 
 private slots:
     void startGame(Constant::MODE mode);
+
     void stopGame();
+
     void quitGame();
+    
+    void loadGame();
+
+//protected:
+//    bool eventFilter(QObject *obj, QEvent *e);
+
 public:
     QWindowController();
 

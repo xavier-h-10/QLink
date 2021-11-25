@@ -4,5 +4,10 @@
         <file>res/box2.png</file>
         <file>res/box3.png</file>
         <file>res/box4.png</file>
+        <file>res/player1.png</file>
+        <file>res/player2.png</file>
+        <file>res/prop1.png</file>
+        <file>res/prop2.png</file>
+        <file>res/prop3.png</file>
     </qresource>
 </RCC>
