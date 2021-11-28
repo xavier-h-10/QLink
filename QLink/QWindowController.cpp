@@ -25,6 +25,7 @@ QWindowController::~QWindowController() {
 
 void QWindowController::startGame(Constant::MODE mode) {
     qDebug() << "QWindowController::startGame called, mode=" << mode;
+    qLinkWindow->clear();
     qLinkWindow->init(mode);
     qLinkMenu->hide();
     qLinkWindow->show();

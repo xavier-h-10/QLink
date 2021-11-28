@@ -6,3 +6,4 @@ int main(int argc, char *argv[]) {
     QWindowController &controller = QWindowController::getInstance();
     return a.exec();
 }
+

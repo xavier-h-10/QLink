@@ -6,17 +6,15 @@
 
 namespace Ui { class QLinkMenu; }
 
-class QLinkMenu : public QWidget
-{
+class QLinkMenu : public QWidget {
     Q_OBJECT
 
 public:
     explicit QLinkMenu(QWidget *parent = nullptr);
+
     ~QLinkMenu();
 
 private slots:
-
-//    void on_openAction_triggered();
 
     void on_startSingleGameButton_clicked();
 
@@ -29,6 +27,11 @@ private slots:
 private:
     Ui::QLinkMenu *ui;
 
+    /**
+     * @brief 载入文件
+     * @param dir 文件目录
+     * @param str 文件名称
+     */
     void loadFile(const QString &dir,const QString &str);
 
 signals:

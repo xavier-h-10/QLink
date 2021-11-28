@@ -2,6 +2,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+
 CONFIG += c++11
 
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -16,7 +17,6 @@ SOURCES += \
     QLinkWindow.cpp \
     QPlayer.cpp \
     QWindowController.cpp \
-    UnitTest.cpp \
     main.cpp
 
 HEADERS += \
@@ -28,7 +28,6 @@ HEADERS += \
     QPlayer.h \
     QWindowController.h \
     Constant.h \
-    UnitTest.h
 
 FORMS += \
     QLinkMenu.ui \

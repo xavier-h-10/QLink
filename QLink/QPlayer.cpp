@@ -9,11 +9,12 @@
 #include <QJsonObject>
 #include <QJsonValue>
 
-QPlayer::QPlayer() {
-
+QPlayer::QPlayer()
+{
 }
 
-QPlayer::QPlayer(int type, QLabel *label) : type(type), label(label) {
+QPlayer::QPlayer(int type, QLabel *label) : type(type), label(label)
+{
     score = 0;
     posx = posy = 0.0;
     enabled = false;
@@ -26,15 +27,17 @@ QPlayer::QPlayer(int type, QLabel *label) : type(type), label(label) {
     generate();
 }
 
-void QPlayer::generate() {
-    posx = genRandom(Constant::mapMinX - 10, Constant::mapMaxX + 10, 30, Constant::windowWidth-30);
+void QPlayer::generate()
+{
+    posx = genRandom(Constant::mapMinX - 10, Constant::mapMaxX + 10, 30, Constant::windowWidth - 30);
     posy = genRandom(Constant::mapMinY - 10, Constant::mapMaxY + 10, Constant::playerMinY, Constant::playerMaxY);
     qDebug() << "QPLayer::generate" << posx << " " << posy;
     label->setGeometry(posx, posy, 30, 30);
 }
 
 
-void QPlayer::show() {
+void QPlayer::show()
+{
     label->setGeometry(posx, posy, 30, 30);
     label->setPixmap(pixmap);
     label->setAlignment(Qt::AlignCenter);
@@ -42,17 +45,20 @@ void QPlayer::show() {
     enabled = true;
 }
 
-void QPlayer::hide() {
+void QPlayer::hide()
+{
     label->clear();
     enabled = false;
 }
 
-bool QPlayer::moveVaild(double x, double y) {
+bool QPlayer::moveVaild(double x, double y)
+{
     if (x < 0 || y < Constant::playerMinY || x > Constant::windowWidth || y > Constant::playerMaxY) return false;
     return true;
 }
 
-void QPlayer::move(double dx, double dy) {
+void QPlayer::move(double dx, double dy)
+{
     if (enabled) {
         qDebug() << "move player " << type << " posx=" << posx << " posy=" << posy;
         dx = dx * Constant::moveSpeed;
@@ -66,7 +72,8 @@ void QPlayer::move(double dx, double dy) {
 }
 
 
-double QPlayer::genRandom(double disabledMin, double disabledMax, double min, double max) {
+double QPlayer::genRandom(double disabledMin, double disabledMax, double min, double max)
+{
     std::default_random_engine e(time(NULL));
     std::mt19937 rand_engine(e());
     std::uniform_real_distribution<double> random(0, Constant::windowHeight);
@@ -86,24 +93,29 @@ double QPlayer::genRandom(double disabledMin, double disabledMax, double min, do
     return 0.0;
 }
 
-double QPlayer::getX() {
+double QPlayer::getX()
+{
     return posx;
 }
 
-double QPlayer::getY() {
+double QPlayer::getY()
+{
     return posy;
 }
 
-void QPlayer::addScore(int x) {
+void QPlayer::addScore(int x)
+{
     score += x;
 }
 
-int QPlayer::getScore() {
+int QPlayer::getScore()
+{
     return score;
 }
 
 
-QJsonObject QPlayer::convertToJson() {
+QJsonObject QPlayer::convertToJson()
+{
     QJsonObject object;
     object.insert("score", score);
     object.insert("type", type);
@@ -114,7 +126,9 @@ QJsonObject QPlayer::convertToJson() {
 }
 
 
-bool QPlayer::recoverFromJson(QJsonObject object) {
+bool QPlayer::recoverFromJson(QJsonObject object)
+{
+    qDebug() << "QPlayer::recoverFromJson called";
     QJsonValue value = object.value("score");
     if (value.isDouble()) {
         score = value.toVariant().toInt();
@@ -157,4 +171,9 @@ bool QPlayer::recoverFromJson(QJsonObject object) {
     label->setGeometry(posx, posy, 30, 30);
 
     return true;
+}
+
+void QPlayer::clear()
+{
+    score = 0;
 }

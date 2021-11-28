@@ -12,14 +12,14 @@ namespace Constant {
     static const int boxType = 4;
     static const int boxScore[4] = {15, 25, 35, 45};
 
-    static const int countdown = 150; //设置180s的倒计时
-    static const int mapMin = 4;     //地图大小范围
+    static const int countdown = 15; //设置180s的倒计时
+    static const int mapMin = 3;
     static const int mapMax = 10;
-    static const int mapDefault = 6; //默认地图长宽
-    static const int windowWidth = 800;  //窗口大小范围
+    static const int mapDefault = 6;
+    static const int windowWidth = 800;
     static const int windowHeight = 800;
 
-    static const int mapSize = 500; //窗口大小
+    static const int mapSize = 500;
 
     static const int mapMinX = 150; //地图左上角和右下角坐标
     static const int mapMinY = 185;
@@ -39,7 +39,7 @@ namespace Constant {
     static const int addCountdown = 30; //增加30s倒计时
     static const int hintTime = 10; //0hint道具生效时间
 
-    static const double moveSpeed = 20;  //设置移动速度
+    static const double moveSpeed = 15;  //设置移动速度
 
     static const double dx = -170; //调整画线距离
     static const double dy = -180;
@@ -56,6 +56,12 @@ namespace Constant {
         HINT
     };
 
+    enum Direction {
+        LEFT,
+        RIGHT,
+        TOP,
+        DOWN
+    };
     enum MODE {
         SINGLE_MODE,
         DOUBLE_MODE,

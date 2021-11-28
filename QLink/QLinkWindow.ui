@@ -10,6 +10,12 @@
     <height>800</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="windowTitle">
    <string>连连看</string>
   </property>
@@ -18,7 +24,7 @@
     <property name="geometry">
      <rect>
       <x>330</x>
-      <y>10</y>
+      <y>0</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -499,11 +505,53 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="prop">
+   <widget class="QLabel" name="prop_0">
     <property name="geometry">
      <rect>
       <x>690</x>
       <y>270</y>
+      <width>50</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>130</y>
+      <width>800</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+   </widget>
+   <widget class="QLabel" name="prop_1">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>380</y>
+      <width>50</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="prop_2">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>290</y>
       <width>50</width>
       <height>50</height>
      </rect>

@@ -10,31 +10,37 @@
 
 QLinkMenu::QLinkMenu(QWidget *parent)
         : QWidget(parent),
-          ui(new Ui::QLinkMenu) {
+          ui(new Ui::QLinkMenu)
+{
     ui->setupUi(this);
     setWindowTitle(tr("连连看"));
 }
 
-QLinkMenu::~QLinkMenu() {
+QLinkMenu::~QLinkMenu()
+{
     delete ui;
 }
 
-void QLinkMenu::on_startSingleGameButton_clicked() {
+void QLinkMenu::on_startSingleGameButton_clicked()
+{
     emit startGame(Constant::MODE::SINGLE_MODE);
 }
 
 
-void QLinkMenu::on_startDoubleGameButton_clicked() {
+void QLinkMenu::on_startDoubleGameButton_clicked()
+{
     emit startGame(Constant::MODE::DOUBLE_MODE);
 }
 
 
-void QLinkMenu::on_loadGameButton_clicked() {
+void QLinkMenu::on_loadGameButton_clicked()
+{
     emit loadGame();
 }
 
 
-void QLinkMenu::on_quitGameButton_clicked() {
+void QLinkMenu::on_quitGameButton_clicked()
+{
     emit quitGame();
 }
 

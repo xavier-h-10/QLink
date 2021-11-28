@@ -22,7 +22,7 @@ set(PROJECT_SOURCES
         jsonutils.cpp
         jsonutils.h
         constant.h
-        QLinkMap.cpp QLinkMap.h QLinkBox.cpp QLinkBox.h QPlayer.cpp QPlayer.h FileUtils.cpp FileUtils.h)
+        QLinkMap.cpp QLinkMap.h QLinkBox.cpp QLinkBox.h QPlayer.cpp QPlayer.h)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(untitled
